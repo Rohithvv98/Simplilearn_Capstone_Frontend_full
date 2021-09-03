@@ -1,0 +1,57 @@
+.user-input-wrp {
+	position: relative;
+	width: 100%;
+}
+.user-input-wrp .inputText{
+	width: 100%;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid #777;
+ 	box-shadow: none !important;
+}
+.user-input-wrp .inputText:hover{
+	border-color:sandybrown;
+	border-width: medium medium 2px;
+}
+.user-input-wrp .floating-label {
+	position: absolute;
+	pointer-events: none;
+	top: 30px;
+	left: 10px;
+	transition: 0.2s ease all;
+    
+}
+.user-input-wrp input:hover ~ .floating-label,
+.user-input-wrp input:not(:hover):valid ~ .floating-label{
+	top: 0px;
+	left: 10px;
+	font-size: 15px;
+	opacity: 1;
+}
+.user-input-wrp input:not(:hover):invalid ~ .floating-label{
+    background-color: white
+}
+.order{
+	width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-border
+{
+border-style: solid;
+border-width: 1px;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+.add-green
+{
+    background-color: rgb(12, 182, 41);
+    color: white;
+}
+.add-green:hover
+{
+    background-color: rgb(11, 155, 35);
+}

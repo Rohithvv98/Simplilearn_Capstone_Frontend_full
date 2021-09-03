@@ -1,0 +1,125 @@
+<div class="container">
+   <br>
+    <div class="row">
+         <!--Side Bar-->
+        <div class="col-sm-3">  
+            
+                <span class="sidehead link-secondary">Categories</span>
+                <hr class="link-dark">
+                <ul class="nav nav-pills flex-column mb-auto"> 
+                <li class="center-text rad" >
+                    <a name="Indian" (click)="categorysearch('Indian')" class="nav-link text-dark">
+                    Indian
+                </a>
+                </li>
+                <li class="center-text rad">
+                    <a name="Chinese" (click)="categorysearch('Chinese')" class="nav-link text-dark">
+                    Chinese
+                </a>
+                </li>
+                <li class="center-text rad">
+                    <a name="Mexican" (click)="categorysearch('Mexican')" class="nav-link text-dark">
+                    Mexican
+                </a>
+                </li>
+                <li class="center-text rad">
+                    <a name="Italian" (click)="categorysearch('Italian')" class="nav-link text-dark">
+                    Italian
+                </a>
+                </li>
+            </ul>
+        <br>
+        </div>
+
+        <!--Carousal-->
+    <div class="container-fluid col-sm-9">
+        <br>
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item carousel-item-next carousel-item-start c1">
+                        <div class="title"><span class="light">Soul Soothing taste.</span></div>
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+                    </div>
+                    <div class="carousel-item c2">
+                        <div class="title"><span class="dark">Freshly Prepared.</span></div>
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+                    </div>
+                    <div class="carousel-item c3">
+                        <div class="title"><span class="light">Joy for Everyone.</span></div>
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+                    </div>
+                    <div class="carousel-item active carousel-item-start c4">
+                        <div class="title"><span class="light">Just Amazing.</span></div>
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+    </div>
+
+
+
+<!--Content-->
+    <div class="row">
+        <br>
+        <div class="col-sm-3">
+            
+        </div>
+        <!--most viewed-->
+        <div class="col-sm-9 link-secondary">
+            <hr>
+            <h3>&nbsp;&nbsp;Most Viewed</h3>
+            <!--products-->
+            <div class="row">
+                <div *ngFor="let product of products; let i=index" class="col-sm-3">
+                    <div  *ngIf="i<4 && product.disabled=='no'" >
+                        <div>
+                            <div *ngIf="product.category=='Chinese'"> 
+                                <img  class="card-img-top" src="../../assets/image/chinese.jpg" alt="Card image cap">
+                            </div>
+                            <div *ngIf="product.category=='Indian'">
+                                <img  class="card-img-top" src="../../assets/image/indian.jpg" alt="Card image cap">
+                            </div>
+                            <div *ngIf="product.category=='Italian'">
+                                <img  class="card-img-top" src="../../assets/image/italian.jpg" alt="Card image cap">
+                            </div>
+                            <div *ngIf="product.category=='Mexican'">
+                                <img  class="card-img-top" src="../../assets/image/mexican.jpg" alt="Card image cap">
+                            </div>
+                               
+                                <div class="card-body product-bg">
+                                    <h4 class="card-title">{{product.name}}</h4>
+                                    <p class="card-text">₹ {{product.price}}<br>(Hurry!! Only {{product.quantity}} left)</p>
+                                    <button (click)="addtocart(product.id)" class="add"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                        <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    </svg> add to cart</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    </div>
+                </div>
+                <br><br>
+            </div>
+        
+    </div>
+
+</div>
+<br>
+    

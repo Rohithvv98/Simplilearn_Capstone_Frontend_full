@@ -1,0 +1,57 @@
+table
+{   
+    width: 100%;
+    text-align: center;
+}
+
+.table-auto{
+    height:150px;
+    overflow:auto;
+  }
+
+tr:nth-child(odd) {
+    background-color: rgb(211, 206, 187);
+  }
+
+  table thead{
+    background-color: rgb(62, 65, 65);
+    color: white;
+  }
+
+
+  .mid-align
+{
+    
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.center{
+    text-align: center;
+}
+
+.clr-btn
+{   color: white;
+    background-color: rgb(25, 190, 89);
+}
+
+.text-ft
+{
+    margin-left: 30px;
+    font-size: 18px;
+}
+input[type=radio] 
+{
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);;
+}
+.rad-ft{
+    font-size: 20px;
+}
+
+.round
+{
+    border-radius: 20px;
+}

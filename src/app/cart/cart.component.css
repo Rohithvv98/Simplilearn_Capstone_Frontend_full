@@ -1,0 +1,47 @@
+.round
+{
+    border-radius: 18px;
+}
+
+table
+{   
+    width: 100%;
+    text-align: center;
+}
+
+.table-auto{
+    height:200px;
+    overflow:auto;
+  }
+
+tr:nth-child(odd) {
+    background-color: rgb(211, 206, 187);
+  }
+
+  table thead{
+    background-color: rgb(62, 65, 65);
+    color: white;
+  }
+
+
+  .mid-align
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.modifyQty
+{
+    padding: 1px;
+    width: 42px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.clr-btn
+{   color: white;
+    background-color: rgb(25, 190, 89);
+}

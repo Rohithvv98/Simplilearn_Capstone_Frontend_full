@@ -1,0 +1,53 @@
+<div class="container">
+    <br>
+        <div class="row">
+            <h3>Add products</h3>
+            <hr>
+        </div>
+        <div class="col-sm-6 mid">
+            <form #addForm="ngForm">
+                    <div class="form-group user-input-wrp ">
+                        <br/>
+                        <input type="text" id="name" [(ngModel)]="product.name" name="name" class="form-control inputText rounded-left" required/>
+                        <span class="floating-label">Product Name</span>
+                    </div>
+                    <div class="form-group user-input-wrp">
+                        <br>
+                        <input type="number" id="quantity" [(ngModel)]="product.quantity" name="quantity" class="form-control inputText rounded-left" required/>
+                        <span class="floating-label">Product Quantity</span>
+                    </div>
+                    <div class="form-group user-input-wrp">
+                        <br>
+                        <input type="number" id="price" [(ngModel)]="product.price" name="price" class="form-control inputText rounded-left" required/>
+                        <span class="floating-label">Product Price</span>
+                    </div>
+                    <br>
+                    <div  class="form-group  user-input-wrp">
+                        <span >Disabled</span>
+                        <select required name="disabled"   id="disabled" [(ngModel)]="product.disabled" name="disabled" class="form-control inputText rounded-left">
+                            <option disabled>Disabled..</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                      
+                    </div>
+                    <br>
+                    <div  class="form-group  user-input-wrp">
+                        <span >Category</span>
+                        <select required name="category"  id="category" [(ngModel)]="product.category" name="category" class="form-control inputText rounded-left">
+                            <option disabled>Select Category</option>
+                            <option value="Indian">Indian</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Mexican">Mexican</option>
+                        </select>
+                      
+                    </div>
+                    <br>
+                    <div class="form-group text-center">
+                        <button type="submit" [disabled]="addForm.invalid"  (click)="addProduct()" class="btn btn-primary round submit">Add</button>
+                   </div>
+            </form>
+        </div>
+        <hr>
+</div>

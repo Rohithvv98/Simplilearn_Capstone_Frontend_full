@@ -1,0 +1,97 @@
+<div class="container row">
+    <div>
+        <h3>Edit Products</h3>
+    </div>
+    <hr>
+        <div class="order">
+        <div class="row">
+            <div class="col-sm-5 col-border">
+                <h4>Current Details</h4>
+                <div>
+                    <form id="add-form">
+                        <div class="form-group user-input-wrp">
+                            <span>Product Name</span>
+                            <input type="text" id="name" class="form-control " value="{{product.name}}" disabled/>
+                        </div>
+                        <div class="form-group user-input-wrp">
+                            <br/>
+                            <span>Product Quantity</span>
+                            <input type="number" id="qty" class="form-control" value="{{product.quantity}}" disabled/>
+                        </div>
+                        <div class="form-group user-input-wrp">
+                            <br>
+                            <span >Product Price</span>
+                            <input type="number" id="price" class="form-control" value="{{product.price}}"  disabled/>
+                        </div>
+                        <div class="form-group user-input-wrp">
+                            <br>
+                            <span>Disabled</span>
+                            <input type="text" id="disabled" class="form-control" value="{{product.disabled}}" disabled/>
+                        </div>
+                        <br>
+                        <div class="form-group user-input-wrp">
+                            <span>Product Category</span>
+                            <input type="text" id="category" class="form-control" value="{{product.category}}" disabled/>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button routerLink="/manage" class="btn btn-primary round submit">Go Back</button>
+                        </div>
+                        
+                </form>
+            </div>
+            
+            </div>
+          
+            <div class="col-sm-5 col-border">
+                <h4>Make Changes</h4>
+                <div>
+                    <form #addForm="ngForm">
+                        <div class="form-group user-input-wrp ">
+                            <span>Product Name</span>
+                            <input type="text" id="name" [(ngModel)]="product.name" name="name" class="form-control inputText rounded-left" required/>
+                        </div>
+                        <br>
+                        <div class="form-group user-input-wrp">
+                            <span>Product Quantity</span>
+                            <input type="number" id="quantity" [(ngModel)]="product.quantity" name="quantity" class="form-control inputText rounded-left" required/>
+                        </div>
+                        <br>
+                        <div class="form-group user-input-wrp">
+                            <span >Product Price</span>
+                            <input type="number" id="price" [(ngModel)]="product.price" name="price" class="form-control inputText rounded-left" required/>
+                        </div>
+                        <br>
+                        <div  class="form-group  user-input-wrp">
+                            <span>Disabled</span>
+                            <select required name="disabled"   id="disabled" [(ngModel)]="product.disabled" name="disabled" class="form-control inputText rounded-left">
+                                <option disabled>Disabled..</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                          
+                        </div>
+                        <br>
+                        <div  class="form-group  user-input-wrp">
+                            <span>Category</span>
+                            <select required name="category"  id="category" [(ngModel)]="product.category" name="category" class="form-control inputText rounded-left">
+                                <option disabled>Select Category</option>
+                                <option value="Indian">Indian</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Mexican">Mexican</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group text-center ">
+                            <button type="submit" [disabled]="addForm.invalid"  (click)="updateProduct()" class="btn submit add-green">Add</button>
+                       </div>
+                       <br>
+                </form>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+</div>

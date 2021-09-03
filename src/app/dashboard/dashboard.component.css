@@ -1,0 +1,142 @@
+* {
+  box-sizing:border-box;
+}
+
+.header {
+  padding: 15px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+}
+
+.center-text{
+    text-align: center;
+    border: 1px; margin:1px;
+    border-style: solid;
+}
+
+.rad
+{
+    border-radius: 30px;
+}
+.sidehead{
+  padding-left: 30%;
+    padding-left: auto;
+    padding-right: auto;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 25px;
+}
+
+li:hover{
+    background-color: rgba(145, 243, 150, 0.678);
+}
+
+.size{
+    height: 500px;
+}
+
+li{
+   
+    background-color: white;
+}
+
+.product-bg
+{   
+    border-radius: 0px 0px 20px 20px;
+    padding: auto;
+    background-color: rgb(238, 238, 238);
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    text-align: center;
+}
+
+.product-bg:hover{
+  background-color: rgba(145, 243, 150, 0.678);
+}
+
+.link-secondary
+{
+  color: black;
+}
+
+.c1
+{
+  border-radius: 22px;
+  height: 300px;
+  background-image: url('../background-image/carousal1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.c2
+{
+  border-radius: 22px;
+  height: 300px;
+  background-image: url('../background-image/carousal2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.c3
+{
+  border-radius: 22px;
+  height: 300px;
+  background-image: url('../background-image/carousal3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.c4
+{
+  border-radius: 22px;
+  height: 300px;
+  background-image: url('../background-image/carosual4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.title
+{
+  font-size: 60px;
+  padding-top:2%;
+}
+
+.light
+{  
+  padding-left: 20px;
+  padding-top:18%;
+  color: rgb(248, 240, 240);
+  font-weight: bolder;
+}
+
+.dark
+{
+  padding-left: 40%;
+  padding-top:8%;
+  color: rgb(81, 224, 112);
+  font-weight: bolder;
+}
+
+
+button{
+    border-radius: 10px;
+}
+button.add{
+  background-color:rgb(15, 189, 84);
+  font-weight: bold;
+  color: azure;
+  }
+
+button.add:hover{
+  background-color:rgb(0, 121, 46);
+}
+
+img{
+  border-radius:20px 20px 0px 0px;
+}

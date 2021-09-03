@@ -1,0 +1,47 @@
+<div class="container">
+    <div>
+        <br>
+        <h3>CheckOut</h3>
+        <hr>
+    </div>
+    <div class="table-auto">
+        <table>
+            <thead>
+                <th>item no.</th>
+                <th>name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>total</th>
+            </thead>
+            <tr *ngFor="let list of cartTable;let i=index">
+                <td>{{i+1}}</td>
+                <td >{{list.productName}}</td>
+                <td >&#8377; {{list.price}}</td>
+                <td >{{list.quantity}}</td>
+                <td >&#8377; {{list.total}}</td>
+            </tr>
+        </table>
+    </div>
+        <br>     
+        <div>
+            <span><h5>Grand Total :</h5>&#8377; {{total}}</span>    
+        </div> 
+        <hr>
+        <div class="mid-align">
+            <h4 class="center">&nbsp;&nbsp;Payment Options</h4>
+            <hr>
+        
+            <span class="rad-ft"><input type="radio" name="paytype" value="cod" checked> Cash On Delivery </span><br>
+            <span class="rad-ft"><input type="radio" name="paytype" value="card" disabled> Credit/Debit Card</span><br>
+            
+                <span class="text-ft"> Card Id : </span><input type="number" id="cardId" disabled><br>
+                <span class="text-ft"> CVV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </span><input type="number" id="cvv" disabled>
+        
+        <br>
+        <br>
+        </div>
+        <div class="center">
+                <button  class="btn round submit clr-btn " type="submit" (click)="onSubmit()">Place Order</button>
+        </div>
+       
+    <br>

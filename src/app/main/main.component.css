@@ -1,0 +1,45 @@
+.activebutton
+{
+    background-color: rgba(145, 243, 150, 0.678);
+    border-radius: 12px;
+}
+
+.link:hover
+{
+    background-color: rgba(145, 243, 150, 0.678);
+    border-radius: 12px;
+}
+
+.round{
+
+    border-radius: 20px;
+    background-color: rgba(230, 230, 230, 0.925);
+}
+
+.down
+{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:46px;   
+    background:rgba(93, 201, 98, 0.918);
+}
+
+header{
+    
+    top: 10;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-image: url('../background-image/bg3.jpg');
+    background-size: 100%;
+  }
+  
+
+.link-secondary
+{
+    color: black;
+}
+.navig-bar
+{
+    position: fixed;
+}
